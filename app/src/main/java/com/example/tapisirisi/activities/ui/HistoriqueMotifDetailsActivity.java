@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.activities.logic.model.Motif;
+import com.example.tapisirisi.logic.model.Motif;
 
 public class HistoriqueMotifDetailsActivity extends AppCompatActivity {
 

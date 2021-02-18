@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.tapisirisi.R;
+import com.example.tapisirisi.activities.Admin.Admin;
 import com.example.tapisirisi.activities.Login.Login;
 import com.example.tapisirisi.activities.Register.Register;
+import com.example.tapisirisi.activities.ui.HistoriqueListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getSupportActionBar().hide();
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, Admin.class);
         startActivity(intent);
     }
 }

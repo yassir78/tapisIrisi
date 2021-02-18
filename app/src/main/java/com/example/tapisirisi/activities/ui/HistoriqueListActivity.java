@@ -9,8 +9,8 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.activities.logic.adapter.HistoriqueListAdapter;
-import com.example.tapisirisi.activities.logic.model.Motif;
+import com.example.tapisirisi.logic.adapter.HistoriqueListAdapter;
+import com.example.tapisirisi.logic.model.Motif;
 
 import java.util.ArrayList;
 import java.util.List;

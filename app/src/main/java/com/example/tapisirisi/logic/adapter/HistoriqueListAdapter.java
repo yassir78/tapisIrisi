@@ -1,4 +1,4 @@
-package com.example.tapisirisi.activities.logic.adapter;
+package com.example.tapisirisi.logic.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.activities.logic.model.Motif;
+import com.example.tapisirisi.logic.model.Motif;
 
 import java.util.List;
 

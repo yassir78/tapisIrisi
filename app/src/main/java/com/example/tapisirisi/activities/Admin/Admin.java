@@ -1,49 +1,34 @@
 package com.example.tapisirisi.activities.Admin;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.tapisirisi.R;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.example.tapisirisi.activities.ui.HistoriqueListActivity;
+import com.example.tapisirisi.activities.ui.HistoriqueMotifDetailsActivity;
+import com.example.tapisirisi.logic.adapter.admin_list_adapter;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.activities.Admin.Admin;
-import com.example.tapisirisi.activities.Login.Login;
-import com.example.tapisirisi.activities.Register.Register;
 
-import com.example.tapisirisi.activities.Main.MainActivity;
+import com.example.tapisirisi.logic.model.Motif;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Admin extends AppCompatActivity {
+    private ListView lv;
 
-    int images[] = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
+    private static List<Motif> motifs = new ArrayList<Motif>() {{
+        add(new Motif(1, R.drawable.ic_launcher_background, "test1"));
+        add(new Motif(2, R.drawable.ic_launcher_background, "test2"));
+        add(new Motif(2, R.drawable.ic_launcher_background, "test3"));
+    }};
+
+    //int images[] = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -52,23 +37,16 @@ public class Admin extends AppCompatActivity {
         setContentView(R.layout.admin_list);
         this.getSupportActionBar().hide();
 
-        MyAdapter a = new MyAdapter(this, images);
+        admin_list_adapter al = new admin_list_adapter(this,motifs);
+       // MyAdapter a = new MyAdapter(this, images);
         ListView lv = findViewById(R.id.adminlv);
-        lv.setAdapter(a);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        lv.setAdapter(al);
 
-                if (position==0){
-                    Toast.makeText(Admin.this, "Fist item", Toast.LENGTH_LONG);
-                }
-            }
-        });
-        /*Intent intent = new Intent(this, Register.class);
-        startActivity(intent);*/
+
+
     }
 
-    public class MyAdapter extends BaseAdapter {
+    /*public class MyAdapter extends BaseAdapter {
         private  Context context;
         private int rImgs[];
 
@@ -108,5 +86,5 @@ public class Admin extends AppCompatActivity {
             imageView.setImageResource(rImgs[position]);
             return  convertView;
         }
-    }
+    }*/
 }

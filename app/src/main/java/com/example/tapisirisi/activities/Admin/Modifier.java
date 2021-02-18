@@ -1,26 +1,33 @@
 package com.example.tapisirisi.activities.Admin;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
+import com.example.tapisirisi.logic.adapter.admin_modif_adapter;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tapisirisi.R;
+import com.example.tapisirisi.logic.model.MotifPropertie;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Modifier extends AppCompatActivity {
     String libelles[] = {"l1","l2","l3"};
     String props[] = {"p1","p2,","p3"};
+
+    private ListView lv;
+    private TextView lib;
+
+    private static List<MotifPropertie> motifs = new ArrayList<MotifPropertie>() {{
+        add(new MotifPropertie(1, "test1", "test1"));
+        add(new MotifPropertie(2, "test1", "test2"));
+        add(new MotifPropertie(3, "test1", "test3"));
+    }};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -29,14 +36,13 @@ public class Modifier extends AppCompatActivity {
         setContentView(R.layout.admin_modif);
         ListView lv = findViewById(R.id.propModidlv);
         this.getSupportActionBar().hide();
-        MyAdapter a = new MyAdapter(this, libelles, props);
+
+        admin_modif_adapter a = new admin_modif_adapter(this, motifs);
         lv.setAdapter(a);
 
-        /*Intent intent = new Intent(this, Register.class);
-        startActivity(intent);*/
     }
 
-    public class MyAdapter extends ArrayAdapter<String> {
+    /*public class MyAdapter extends ArrayAdapter<String> {
         Context context;
         String libelles[];
         String proprties[];
@@ -60,7 +66,7 @@ public class Modifier extends AppCompatActivity {
             desc.setText(proprties[position]);
             return  row;
         }
-    }
+    }*/
 
 
 }

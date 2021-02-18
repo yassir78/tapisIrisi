@@ -1,4 +1,4 @@
-package com.example.tapisirisi.activities.logic.model;
+package com.example.tapisirisi.logic.model;
 
 public class Motif {
     private long id;
