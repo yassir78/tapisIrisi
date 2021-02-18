@@ -176,4 +176,13 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="416dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enregister"
+        android:id="@+id/profile_update_btn"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="568dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
