@@ -22,4 +22,16 @@
         </item>
 
     </style>
+
+    <style name="profile_login">
+
+        <item name="android:textSize">
+            36sp
+        </item>
+
+        <item name="android:textColor">
+            #4F80D8
+        </item>
+
+    </style>
 </resources>
