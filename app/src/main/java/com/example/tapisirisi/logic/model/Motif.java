@@ -1,22 +1,19 @@
 package com.example.tapisirisi.logic.model;
 
+import java.sql.Blob;
+import java.util.List;
+
 public class Motif {
     private long id;
-    private int drawable;
+    private Blob image;
     private String libelle;
+    private List<Propriete> proprietes;
 
-    public Motif() {
-    }
-
-    public Motif(int drawable, String libelle) {
-        this.drawable = drawable;
-        this.libelle = libelle;
-    }
-
-    public Motif(long id, int drawable, String libelle) {
+    public Motif(long id, Blob image, String libelle, List<Propriete> proprietes) {
         this.id = id;
-        this.drawable = drawable;
+        this.image = image;
         this.libelle = libelle;
+        this.proprietes = proprietes;
     }
 
     public long getId() {
@@ -27,12 +24,12 @@ public class Motif {
         this.id = id;
     }
 
-    public int getDrawable() {
-        return drawable;
+    public Blob getImage() {
+        return image;
     }
 
-    public void setDrawable(int drawable) {
-        this.drawable = drawable;
+    public void setImage(Blob image) {
+        this.image = image;
     }
 
     public String getLibelle() {
@@ -41,5 +38,13 @@ public class Motif {
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public List<Propriete> getProprietes() {
+        return proprietes;
+    }
+
+    public void setProprietes(List<Propriete> proprietes) {
+        this.proprietes = proprietes;
     }
 }

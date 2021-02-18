@@ -10,16 +10,16 @@ import android.widget.EditText;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.logic.model.MotifPropertie;
+import com.example.tapisirisi.logic.model.Propriete;
 
 import java.util.List;
 
 public class admin_modif_adapter extends BaseAdapter {
 
-    private List<MotifPropertie> motifs;
+    private List<Propriete> motifs;
     private Context context;
 
-    public admin_modif_adapter(Context context, List<MotifPropertie> motifs) {
+    public admin_modif_adapter(Context context, List<Propriete> motifs) {
         this.context = context;
         this.motifs = motifs;
     }
@@ -48,7 +48,7 @@ public class admin_modif_adapter extends BaseAdapter {
         }
 
         // get current item to be displayed
-        MotifPropertie currentMotif = (MotifPropertie) getItem(position);
+        Propriete currentMotif = (Propriete) getItem(position);
 
         // get the TextView for item name and item description
         EditText lib = (EditText)
@@ -65,7 +65,7 @@ public class admin_modif_adapter extends BaseAdapter {
         return convertView;
     }
 
-    public void setMotifs(List<MotifPropertie> motifs)
+    public void setMotifs(List<Propriete> motifs)
     {
         this.motifs = motifs;
     }

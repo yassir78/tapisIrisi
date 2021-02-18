@@ -1,19 +1,17 @@
 package com.example.tapisirisi.logic.model;
 
-public class MotifPropertie {
+public class Propriete {
     private long id;
     private String libelle;
     private String description;
-
-    public MotifPropertie() {
+    public Propriete() {
     }
-
-    public MotifPropertie(String description, String libelle) {
+    public Propriete(String description, String libelle) {
         this.description = description;
         this.libelle = libelle;
     }
 
-    public MotifPropertie(long id, String description, String libelle) {
+    public Propriete(long id, String description, String libelle) {
         this.id = id;
         this.description = description;
         this.libelle = libelle;
@@ -31,7 +29,7 @@ public class MotifPropertie {
         return description;
     }
 
-    public void setDescription(String drawable) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
