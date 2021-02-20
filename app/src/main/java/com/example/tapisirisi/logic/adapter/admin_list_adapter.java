@@ -1,6 +1,11 @@
 package com.example.tapisirisi.logic.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tapisirisi.R;
 import com.example.tapisirisi.logic.model.Motif;
 
+import java.io.ByteArrayOutputStream;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.List;
 
 public class admin_list_adapter extends BaseAdapter {
@@ -55,8 +63,13 @@ public class admin_list_adapter extends BaseAdapter {
         ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
 
 
+
+            byte[] blobAsBytes = currentMotif.getDrawable();
+            Bitmap btm =BitmapFactory.decodeByteArray(blobAsBytes,0,blobAsBytes.length);
+            imageView.setImageBitmap(btm);
+
         //sets the text for item name and item description from the current item object
-        imageView.setBackgroundResource(currentMotif.getDrawable());
+      //  imageView.setBackgroundResource(currentMotif.getDrawable());
 
 
         // returns the view for the current row

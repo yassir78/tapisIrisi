@@ -1,19 +1,21 @@
 package com.example.tapisirisi.logic.model;
 
+import java.sql.Blob;
+
 public class Motif {
     private long id;
-    private int drawable;
+    private byte[] drawable;
     private String libelle;
 
     public Motif() {
     }
 
-    public Motif(int drawable, String libelle) {
+    public Motif(byte[] drawable, String libelle) {
         this.drawable = drawable;
         this.libelle = libelle;
     }
 
-    public Motif(long id, int drawable, String libelle) {
+    public Motif(long id, byte[] drawable, String libelle) {
         this.id = id;
         this.drawable = drawable;
         this.libelle = libelle;
@@ -27,11 +29,11 @@ public class Motif {
         this.id = id;
     }
 
-    public int getDrawable() {
+    public byte[] getDrawable() {
         return drawable;
     }
 
-    public void setDrawable(int drawable) {
+    public void setDrawable(byte[] drawable) {
         this.drawable = drawable;
     }
 

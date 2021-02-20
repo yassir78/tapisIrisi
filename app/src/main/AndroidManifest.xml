@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TapisIrisi">
-        <activity android:name=".user_profile"></activity>
+        <activity android:name=".activities.Admin.Ajout_Prop"></activity>
+        <activity android:name=".user_profile" />
         <activity android:name=".activities.ui.HistoriqueMotifDetailsActivity" />
         <activity android:name=".activities.ui.HistoriqueListActivity" />
         <activity android:name=".activities.Register.Register" />

@@ -21,8 +21,8 @@ public class HistoriqueMotifDetailsActivity extends AppCompatActivity {
 
         motifDetailsImageView = findViewById(R.id.motifDetailsImageView);
 
-        Intent intent = getIntent();
+    /*    Intent intent = getIntent();
         Motif motif = new Motif(intent.getIntExtra("element_id", 0), intent.getIntExtra("element_drawable", 0), intent.getStringExtra("element_libelle"));
-        motifDetailsImageView.setImageResource(motif.getDrawable());
+        motifDetailsImageView.setImageResource(motif.getDrawable());*/
     }
 }
