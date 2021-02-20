@@ -1,5 +1,7 @@
 package com.example.tapisirisi.logic.model;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 import java.sql.Blob;
 import java.util.List;
 
@@ -23,6 +25,14 @@ public class User {
         this.profile_image = profile_image;
         this.motifs = motifs;
     }
+
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+
+    }
+
+
 
     public Long getId() {
         return id;

@@ -47,7 +47,7 @@
        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
    <com.google.android.material.textfield.TextInputLayout
-       android:id="@+id/textInputLayout"
+       android:id="@+id/loginInput1"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_margin="15dp"
@@ -63,6 +63,7 @@
        app:suffixTextColor="@color/purple_500">
 
       <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/loginInput"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:backgroundTint="#FFFFFF"
@@ -82,9 +83,9 @@
        android:textColor="#00114B"
        android:textSize="18sp"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+       app:layout_constraintTop_toBottomOf="@+id/loginInput1" />
    <com.google.android.material.textfield.TextInputLayout
-       android:id="@+id/password"
+       android:id="@+id/passwordLabel"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_margin="15dp"
@@ -100,9 +101,11 @@
        app:suffixTextColor="@color/purple_500">
 
       <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/passwordInput"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:backgroundTint="#FFFFFF"
+          android:inputType="textWebPassword"
           android:shadowColor="#F5F5F5"
           android:textColor="@color/purple_500"
           android:textColorHint="@color/purple_500" />
@@ -110,18 +113,18 @@
    </com.google.android.material.textfield.TextInputLayout>
 
    <TextView
-       android:id="@+id/textView9"
+       android:id="@+id/forgettenPass"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginTop="20dp"
        android:layout_marginEnd="10dp"
-       android:text="Mot de passe oublié ?"
+       android:text="Pas encore inscrit ?"
        android:textColor="#00114B"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/password" />
+       app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
 
    <Button
-       android:id="@+id/button2"
+       android:id="@+id/loginButton"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:backgroundTint="#FBB127"
@@ -131,7 +134,7 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.328"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/textView9" />
+       app:layout_constraintTop_toBottomOf="@+id/forgettenPass" />
 
    <View
        android:id="@+id/view6"

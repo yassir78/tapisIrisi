@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getSupportActionBar().hide();
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
-    //Intent intent = new Intent(this, Admin.class);
-    //startActivity(intent);
+
 }
