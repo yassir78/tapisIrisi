@@ -10,7 +10,7 @@ import com.example.tapisirisi.logic.adapter.admin_modif_adapter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tapisirisi.R;
-import com.example.tapisirisi.logic.model.MotifPropertie;
+import com.example.tapisirisi.logic.model.Propriete;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +22,10 @@ public class Modifier extends AppCompatActivity {
     private ListView lv;
     private TextView lib;
 
-    private static List<MotifPropertie> motifs = new ArrayList<MotifPropertie>() {{
-        add(new MotifPropertie(1, "test1", "test1"));
-        add(new MotifPropertie(2, "test1", "test2"));
-        add(new MotifPropertie(3, "test1", "test3"));
+    private static List<Propriete> motifs = new ArrayList<Propriete>() {{
+        add(new Propriete(1, "test1", "test1"));
+        add(new Propriete(2, "test1", "test2"));
+        add(new Propriete(3, "test1", "test3"));
     }};
 
     @Override
