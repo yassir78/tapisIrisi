@@ -39,13 +39,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/ajouter_button"
-            android:backgroundTint="#FBB127"
+            android:backgroundTint="#00BCD4"
             android:gravity="center"
             android:text="Ajouter"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
     </LinearLayout>
 

@@ -23,9 +23,9 @@ public class Admin extends AppCompatActivity {
     private ListView lv;
 
     private static List<Motif> motifs = new ArrayList<Motif>() {{
-        //add(new Motif(1, R.drawable.ic_launcher_background, "test1"));
-        //add(new Motif(2, R.drawable.ic_launcher_background, "test2"));
-        //add(new Motif(2, R.drawable.ic_launcher_background, "test3"));
+        add(new Motif(1, R.drawable.ic_launcher_background, "test1"));
+        add(new Motif(2, R.drawable.ic_launcher_background, "test2"));
+        add(new Motif(2, R.drawable.ic_launcher_background, "test3"));
     }};
 
     //int images[] = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};

@@ -58,8 +58,8 @@ public class HistoriqueListAdapter extends BaseAdapter {
                 convertView.findViewById(R.id.historiqueItemTitle);
 
         //sets the text for item name and item description from the current item object
-       // motifLibelleImageView.setBackgroundResource(currentMotif.getDrawable());
-        //motifTitleTextView.setText(currentMotif.getLibelle());
+        motifLibelleImageView.setBackgroundResource(currentMotif.getDrawable());
+        motifTitleTextView.setText(currentMotif.getLibelle());
 
         // returns the view for the current row
         return convertView;
